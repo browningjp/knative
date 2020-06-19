@@ -1,8 +1,8 @@
 <?php
 
 $birthday = exec("stat -c='%Y' /proc/1/"); // container start time
-$birthday = substr($birthday, 1); // remove first character (=)
-$birthday = date("Y-m-d H:i:s T"); // reformat date
+$birthday = (int) substr($birthday, 1); // remove first character (=)
+$birthday = date("Y-m-d H:i:s T", $birthday); // reformat date
 
 $hostname = $_ENV['HOSTNAME'];
 
