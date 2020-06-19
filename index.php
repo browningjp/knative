@@ -1,6 +1,6 @@
 <?php
 
-$birthday = system("stat -c='%y' /proc/1/") // container start time
+$birthday = system("stat -c='%y' /proc/1/"); // container start time
 $hostname = $_ENV['HOSTNAME'];
 
 ?>
